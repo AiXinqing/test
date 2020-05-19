@@ -1,0 +1,161 @@
+/**
+* I think element-ui's default theme color is too light for long-term use.
+* So I modified the default color and you can modify it to your liking.
+**/
+
+/* theme color */
+$--color-primary: #1ab394;
+$--color-success: #13ce66;
+$--color-warning: #FFBA00;
+$--color-danger: #ff4949;
+// $--color-info: #1E1E1E;
+
+$--button-font-weight: 400;
+
+// $--color-text-regular: #1f2d3d;
+
+$--border-color-light: #dfe4ed;
+$--border-color-lighter: #e6ebf5;
+
+$--table-border:1px solid#dfe6ec;
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+body{
+  --border_bottom:#eee;
+  // 浅灰色
+  --lightgray:#F8F8F8;
+  --darkgray:#393D49;
+  --red: #e54d42;
+  --Azure:#76d1bf;
+	--orange: #f37b1d;
+	--yellow: rgba(255,153,0,0.2);
+	--olive: #8dc63f;
+	--green: #39b54a;
+	--cyan: #1cbbb4;
+	--blue: #0081ff;
+	--purple: #6739b6;
+	--mauve: #9c26b0;
+	--pink: #e03997;
+	--brown: #a5673f;
+	--grey: #8799a3;
+	--black: #333333;
+	--darkGray: #666666;
+	--gray: #aaaaaa;
+	--ghostWhite: #f1f1f1;
+	--white: #ffffff;
+	--theme:#FF9900;
+	--f7:#F7F7F7;
+	/* 浅色 */
+	--redLight: #fadbd9;
+	--orangeLight: #fde6d2;
+	--yellowLight: #fef2ce;
+	--oliveLight: #e8f4d9;
+	--greenLight: #d7f0db;
+	--cyanLight: #d2f1f0;
+	--blueLight: #cce6ff;
+	--purpleLight: #e1d7f0;
+	--mauveLight: #ebd4ef;
+	--pinkLight: #f9d7ea;
+	--brownLight: #ede1d9;
+	--greyLight: #e7ebed;
+	--hover:#F5F7FA;
+	/* 渐变色 */
+	--gradualRed: linear-gradient(45deg, #f43f3b, #ec008c);
+	--gradualOrange: linear-gradient(45deg, #ff9700, #ed1c24);
+	--gradualGreen: linear-gradient(45deg, #39b54a, #8dc63f);
+	--gradualPurple: linear-gradient(45deg, #9000ff, #5e00ff);
+	--gradualPink: linear-gradient(45deg, #ec008c, #6739b6);
+	--gradualBlue: linear-gradient(45deg, #0081ff, #1cbbb4);
+	/* 阴影透明色 */
+	--ShadowSize: 6upx 6upx 8upx;
+	--redShadow: rgba(204, 69, 59, 0.2);
+	--orangeShadow: rgba(217, 109, 26, 0.2);
+	--yellowShadow: rgba(224, 170, 7, 0.2);
+	--oliveShadow: rgba(124, 173, 55, 0.2);
+	--greenShadow: rgba(48, 156, 63, 0.2);
+	--cyanShadow: rgba(28, 187, 180, 0.2);
+	--blueShadow: rgba(0, 102, 204, 0.2);
+	--purpleShadow: rgba(88, 48, 156, 0.2);
+	--mauveShadow: rgba(133, 33, 150, 0.2);
+	--pinkShadow: rgba(199, 50, 134, 0.2);
+	--brownShadow: rgba(140, 88, 53, 0.2);
+	--greyShadow: rgba(114, 130, 138, 0.2);
+	--grayShadow: rgba(114, 130, 138, 0.2);
+	--blackShadow: rgba(26, 26, 26, 0.2); 
+}
+.delete {
+	color: var(--red) !important;
+}
+.el-button.delete:hover{
+	color: var(--red) !important;
+}
+
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  theme: $--color-primary;
+}
+:focus{
+    outline: none;
+}
+.el-dialog__header{
+  border-bottom: 1px solid var(--border_bottom);
+  font-size: 14px;
+  background-color: var(--lightgray);
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  .el-dialog__headerbtn{
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .el-dialog__title{
+    font-size: 14px;
+  }
+}
+.el-dialog__body{
+max-height: 50vh;
+padding: 10px 20px;
+overflow: auto;
+label{
+  font-weight:500;
+ }
+}
+.el-dialog__body::-webkit-scrollbar {
+  width: 3px;
+  height: 8px;
+  background-color: var(--darkgray);
+}
+.el-dialog__footer,.el-dialog__header{
+padding: 10px 20px;
+}
+.el-dialog__footer{
+border-top: 1px solid var(--border_bottom);
+background-color: var(--lightgray);
+}
+
+.el-tree-node__expand-icon{
+	color: #697687;
+}
+
+.el-message-box--center{
+	padding-bottom: 15px;
+	.el-message-box__header{
+		padding: 15px;
+		.el-message-box__title{
+			justify-content: flex-start;
+		}
+	}
+	.el-message-box__btns{
+		text-align: right;
+	}
+}
+.el-scrollbar__wrap{
+	overflow-y: scroll;
+}

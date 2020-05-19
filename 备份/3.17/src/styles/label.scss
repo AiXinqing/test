@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+@mixin graphics($width, $height, $top, $radius, $bg: transparent) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+    position: relative;
+    top: $top;
+    border-radius: $radius;
+    background-color: $bg;
+}
+
+%bg-parameter {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@mixin wH($width:auto, $height:auto) {
+    width: $width;
+    height: $height;
+    line-height: $height;
+}

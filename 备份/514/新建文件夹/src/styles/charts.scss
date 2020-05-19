@@ -1,0 +1,179 @@
+@import "~@/styles/label.scss";
+
+.row-title {
+  font-size: 14px;
+}
+
+.row-box {
+  overflow: auto;
+  height: 100%;
+  padding-bottom: 50px;
+}
+
+.row-tableBox {
+  padding-left: 70px;
+  display: flex;
+
+  .row-table {
+    display: flex;
+  }
+
+  .row-left {
+    line-height: 18px;
+    border-right: 1px dashed #F2F2F2;
+  }
+
+  .row-right {
+    padding-top: 5px;
+    line-height: 18px;
+    padding-left: 13px;
+
+    .row-item {
+      font-size: 12px;
+    }
+  }
+
+  .row-year {
+    .name {
+      font-size: 12px;
+      color: #999;
+      padding-top: 5px;
+      line-height: 17px;
+
+      .num {
+        font-size: 14px;
+        color: #666;
+      }
+    }
+
+    .title-row.row-col1 {
+      span.name {
+        color: #999;
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      span.num {
+        color: #666;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+
+    .title-row.row-col2 {
+      div {
+        .num-name {
+          color: #666;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .num-compare {
+          color: #52A3FF;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.p-c-info-title {
+  padding: 10px 0 0 30px;
+  font-size: 16px;
+  color: $font-333;
+  position: relative;
+  height: 35px;
+
+
+  i {
+    @include graphics(3px, 16px, 3px, 0, $chart);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-right: 5px;
+  }
+
+  span {
+    strong {
+      color: $main;
+      font-size: 20px;
+      margin: 0 2px;
+    }
+  }
+
+  .ststistics-box {
+    position: absolute;
+    height: 40px;
+    right: 10px;
+    top: 0;
+
+    span {
+      position: absolute;
+      display: inline-block;
+      @include wH(82px, 26px);
+      background-color: $main;
+      right: 10px;
+      top: 7px;
+      border-radius: 2px;
+      color: $white;
+      text-align: center;
+      font-size: 12px;
+      cursor: pointer;
+
+      i {
+        @include graphics(14px, 10px, 1px, 0);
+        background-image: url('../assets/tab/fold.png');
+        @extend %bg-parameter;
+        margin-right: 3px;
+      }
+    }
+  }
+}
+
+.row-box {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  min-width: 980px;
+
+
+  .row-charts-item {
+    min-width: 364px;
+    margin: 15px 0 0 15px;
+    background-color: $white;
+    border-radius: 4px;
+    min-height: 260px;
+    max-height: 300px;
+    padding: 10px 15px;
+
+    .row-title {
+      font-size: 14px;
+      color: $font-333;
+    }
+  }
+
+  .collapse-box {
+    min-height: 40px;
+  }
+
+}
+
+//-----------------no-data
+.no-data {
+  text-align: center;
+  height: 100%;
+  color: #999;
+
+  .icon {
+    @include graphics(200px, 130px, 40px, 0);
+    background-image: url('../assets/no-data.png');
+    @extend %bg-parameter;
+    margin-bottom: 40px;
+  }
+}
+
+.chart-container {
+  position: relative;
+  width: calc(100% - 0px);
+  height: calc(100vh - 40px);
+  background-color: $bf-f7;
+}
